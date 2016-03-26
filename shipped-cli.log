@@ -1,0 +1,169 @@
+TRACE 2016/03/26 15:46:11.402169 config.go:100: .shipped directory already exists
+TRACE 2016/03/26 15:46:11.402315 config.go:109: Config file .shipped/shipped.ini already exists in /Users/yogyadav
+TRACE 2016/03/26 15:46:11.402409 config.go:139: Using config file /Users/yogyadav/.shipped/shipped.ini
+TRACE 2016/03/26 15:46:11.405705 config.go:189: Set value apiToken=EPrsYwWoVFyXIbjvgeXdQeIDjrWGQfxu in /Users/yogyadav/.shipped/shipped.ini
+TRACE 2016/03/26 15:46:11.405751 main.go:172: CLI start directory is /Users/yogyadav/TestJSB/testjsb01
+TRACE 2016/03/26 15:46:11.405813 config.go:139: Using config file /Users/yogyadav/TestJSB/testjsb01/.shipped/shipped.ini
+TRACE 2016/03/26 15:46:11.405847 config.go:148: Also using project config file /Users/yogyadav/TestJSB/.shipped/shipped.ini
+TRACE 2016/03/26 15:46:11.405872 config.go:158: Also using home config file /Users/yogyadav/.shipped/shipped.ini
+TRACE 2016/03/26 15:46:11.407676 utils.go:98: Console width is 80; help width is 79
+TRACE 2016/03/26 15:46:11.407746 main.go:137: Shipped-cli 1.0 b139 20160219 170955 starting with args struct { BootLogfile string; ConfigFile string; ConsoleMode bool; Debug bool; Expanded bool; FastBootstrap bool; Force bool; Full bool; Help bool; Json bool; Latest bool; LocalDocker bool; Logfile string; MockSDKClient bool; OutputFields string; RunAsRootOK bool; ShippedHome string; ShowVersion bool; Server string; Token string; VM string; ObjType string; Command string; Arguments []string }{BootLogfile:"", ConfigFile:"", ConsoleMode:false, Debug:false, Expanded:true, FastBootstrap:false, Force:false, Full:false, Help:false, Json:false, Latest:false, LocalDocker:false, Logfile:"/Users/yogyadav/TestJSB/testjsb01/shipped-cli.log", MockSDKClient:false, OutputFields:"", RunAsRootOK:false, ShippedHome:"", ShowVersion:false, Server:"https://api.ciscoshipped.io/", Token:"EPrsYwWoVFyXIbjvgeXdQeIDjrWGQfxu", VM:"vagrant", ObjType:"Local", Command:"bootstrap", Arguments:[]string{"6e8dd47c-f388-11e5-8f07-0242ac110240"}}
+TRACE 2016/03/26 15:46:11.407758 commands.go:92: Running command(Local) subcommand(bootstrap) args([]string{"6e8dd47c-f388-11e5-8f07-0242ac110240"}) help(false)
+TRACE 2016/03/26 15:46:11.407768 commands.go:160: objDesc.Name = "Local"
+TRACE 2016/03/26 15:46:11.407821 local.go:275: Starting LocalService.Bootstrap()
+TRACE 2016/03/26 15:46:11.407843 projects.go:273: Directory  contains a .shipped directory
+TRACE 2016/03/26 15:46:11.407875 projects.go:273: Directory /Users/yogyadav/TestJSB contains a .shipped directory
+TRACE 2016/03/26 15:46:11.407892 projects.go:270: Using user's home directory /Users/yogyadav as Shipped project directory
+TRACE 2016/03/26 15:46:11.407906 projects.go:309: Changed to project directory /Users/yogyadav
+TRACE 2016/03/26 15:46:11.407950 config.go:139: Using config file /Users/yogyadav/.shipped/shipped.ini
+TRACE 2016/03/26 15:46:11.408054 client.go:114: GET https://api.ciscoshipped.io/projects/6e8dd47c-f388-11e5-8f07-0242ac110240?api_token=EPrsYwWoVFyXIbjvgeXdQeIDjrWGQfxu
+TRACE 2016/03/26 15:46:12.462674 client.go:159: Request status code 200 (200 OK)
+TRACE 2016/03/26 15:46:12.462819 client.go:114: GET https://api.ciscoshipped.io/projects/6e8dd47c-f388-11e5-8f07-0242ac110240/services?api_token=EPrsYwWoVFyXIbjvgeXdQeIDjrWGQfxu
+TRACE 2016/03/26 15:46:12.933461 client.go:159: Request status code 200 (200 OK)
+TRACE 2016/03/26 15:46:12.933848 common.go:67: Project 6e8dd47c-f388-11e5-8f07-0242ac110240 (TestJSB) has 1 services
+TRACE 2016/03/26 15:46:12.933874 bootstrap.go:62: Starting bootstrap on server(https://api.ciscoshipped.io/) for project(6e8dd47c-f388-11e5-8f07-0242ac110240) with token(EPrsYwWoVFyXIbjvgeXdQeIDjrWGQfxu)
+TRACE 2016/03/26 15:46:12.933885 bootstrap.go:69: Obtaining platform-specific deployer...
+TRACE 2016/03/26 15:46:12.934356 bootstrap.go:77: Starting pre-verification...
+TRACE 2016/03/26 15:46:12.934404 client.go:114: POST https://api.ciscoshipped.io/cli/6e8dd47c-f388-11e5-8f07-0242ac110240/status/project_init?api_token=EPrsYwWoVFyXIbjvgeXdQeIDjrWGQfxu
+TRACE 2016/03/26 15:46:13.385021 client.go:159: Request status code 200 (200 OK)
+TRACE 2016/03/26 15:46:13.385189 common.go:30: Pre-Verification Start
+TRACE 2016/03/26 15:46:13.385320 common.go:36: Pre-Verification End
+TRACE 2016/03/26 15:46:13.385334 macdeployer.go:142: git Installation check
+TRACE 2016/03/26 15:46:13.385385 command.go:59: Executing command: git --version
+TRACE 2016/03/26 15:46:13.389172 deployer.go:225: git version 2.7.4
+TRACE 2016/03/26 15:46:13.389301 macdeployer.go:142: git Installation check
+TRACE 2016/03/26 15:46:13.389354 command.go:59: Executing command: git --version
+TRACE 2016/03/26 15:46:13.391991 deployer.go:225: git version 2.7.4
+2016/03/26 15:46:13.392101 deployer.go:100: git 2.7.4 is already installed.
+TRACE 2016/03/26 15:46:13.392155 command.go:23: Executing command: git config --global --list
+2016/03/26 15:46:13.395063 bootstrap.go:317: ============================================================
+2016/03/26 15:46:13.395083 bootstrap.go:318: Check prerequisite software
+2016/03/26 15:46:13.395092 bootstrap.go:319: ============================================================
+TRACE 2016/03/26 15:46:13.395098 macdeployer.go:142: virtualbox Installation check
+TRACE 2016/03/26 15:46:13.395131 command.go:59: Executing command: vboxmanage --version
+TRACE 2016/03/26 15:46:13.407434 deployer.go:225: 5.0.14r105127
+2016/03/26 15:46:13.407901 macdeployer.go:43: virtualbox 5.0.14r105127 is already installed.
+TRACE 2016/03/26 15:46:13.407959 client.go:114: POST https://api.ciscoshipped.io/cli/6e8dd47c-f388-11e5-8f07-0242ac110240/status/install_vbox?api_token=EPrsYwWoVFyXIbjvgeXdQeIDjrWGQfxu
+TRACE 2016/03/26 15:46:13.860510 client.go:159: Request status code 200 (200 OK)
+TRACE 2016/03/26 15:46:13.860672 macdeployer.go:142: vagrant Installation check
+TRACE 2016/03/26 15:46:13.860713 command.go:59: Executing command: vagrant --version
+TRACE 2016/03/26 15:46:14.106882 deployer.go:225: Vagrant 1.8.1
+2016/03/26 15:46:14.108942 deployer.go:100: vagrant 1.8.1 is already installed.
+TRACE 2016/03/26 15:46:14.109010 client.go:114: POST https://api.ciscoshipped.io/cli/6e8dd47c-f388-11e5-8f07-0242ac110240/status/install_vagrant?api_token=EPrsYwWoVFyXIbjvgeXdQeIDjrWGQfxu
+TRACE 2016/03/26 15:46:14.569873 client.go:159: Request status code 200 (200 OK)
+2016/03/26 15:46:14.570060 bootstrap.go:317: ============================================================
+2016/03/26 15:46:14.570087 bootstrap.go:318: Cloning Repositories
+2016/03/26 15:46:14.570099 bootstrap.go:319: ============================================================
+TRACE 2016/03/26 15:46:14.570109 common.go:109: Cloning Repositories Start
+TRACE 2016/03/26 15:46:14.570225 config.go:100: .shipped directory already exists
+TRACE 2016/03/26 15:46:14.570272 config.go:109: Config file .shipped/shipped.ini already exists in /Users/yogyadav/TestJSB
+TRACE 2016/03/26 15:46:14.570367 config.go:139: Using config file /Users/yogyadav/TestJSB/.shipped/shipped.ini
+TRACE 2016/03/26 15:46:14.570429 config.go:148: Also using project config file /Users/yogyadav/.shipped/shipped.ini
+TRACE 2016/03/26 15:46:14.570488 config.go:158: Also using home config file /Users/yogyadav/.shipped/shipped.ini
+TRACE 2016/03/26 15:46:14.574599 config.go:189: Set value projectId=6e8dd47c-f388-11e5-8f07-0242ac110240 in /Users/yogyadav/TestJSB/.shipped/shipped.ini
+TRACE 2016/03/26 15:46:14.579154 config.go:189: Set value projectName=TestJSB in /Users/yogyadav/TestJSB/.shipped/shipped.ini
+TRACE 2016/03/26 15:46:14.579178 common.go:216: Created TestJSB/.shipped/shipped.ini with projectId=6e8dd47c-f388-11e5-8f07-0242ac110240 and projectName=TestJSB
+TRACE 2016/03/26 15:46:14.580480 config.go:139: Using config file /Users/yogyadav/.shipped/shipped.ini
+2016/03/26 15:46:14.580547 common.go:158: Looks like service 1 testjsb01 is already cloned - found .git directory in /Users/yogyadav/TestJSB/testjsb01
+TRACE 2016/03/26 15:46:14.580556 common.go:196: Cloning Repositories End
+2016/03/26 15:46:14.580568 bootstrap.go:317: ============================================================
+2016/03/26 15:46:14.580578 bootstrap.go:318: Download Configuration
+2016/03/26 15:46:14.580587 bootstrap.go:319: ============================================================
+TRACE 2016/03/26 15:46:14.580603 common.go:260: downloadScripts URL: https://api.ciscoshipped.io//cli/6e8dd47c-f388-11e5-8f07-0242ac110240
+TRACE 2016/03/26 15:46:14.580999 download.go:70: Starting download of https://api.ciscoshipped.io//cli/6e8dd47c-f388-11e5-8f07-0242ac110240/Vagrantfile?api_token=EPrsYwWoVFyXIbjvgeXdQeIDjrWGQfxu to TestJSB/.shipped/Vagrantfile
+TRACE 2016/03/26 15:46:15.172572 download.go:107: Download of Vagrantfile complete; -1 bytes downloaded.
+TRACE 2016/03/26 15:46:15.172818 download.go:70: Starting download of https://api.ciscoshipped.io//cli/6e8dd47c-f388-11e5-8f07-0242ac110240/docker-compose.yml?api_token=EPrsYwWoVFyXIbjvgeXdQeIDjrWGQfxu to TestJSB/.shipped/docker-compose.yml
+TRACE 2016/03/26 15:46:15.400083 download.go:107: Download of docker-compose.yml complete; 255 bytes downloaded.
+TRACE 2016/03/26 15:46:15.400475 common.go:455: Created Vagrantfile.LocalDocker
+TRACE 2016/03/26 15:46:15.403924 command.go:59: Executing command: git -C TestJSB/testjsb01 reset .
+2016/03/26 15:46:15.411379 util.go:97: Unstaged changes after reset:
+2016/03/26 15:46:15.411419 util.go:97: M	src/main/java/org/test/DemoController.java
+TRACE 2016/03/26 15:46:15.411473 download.go:70: Starting download of https://api.ciscoshipped.io//cli/6e8dd47c-f388-11e5-8f07-0242ac110240/8732d8b8-f388-11e5-8f09-0242ac110240/drone.sec?api_token=EPrsYwWoVFyXIbjvgeXdQeIDjrWGQfxu to TestJSB/testjsb01/.drone.sec
+TRACE 2016/03/26 15:46:15.646429 download.go:107: Download of .drone.sec complete; -1 bytes downloaded.
+TRACE 2016/03/26 15:46:15.646492 command.go:59: Executing command: git -C TestJSB/testjsb01 add .drone.sec
+TRACE 2016/03/26 15:46:15.674273 command.go:59: Executing command: git -C TestJSB/testjsb01 commit -m **Shipped -- Add Drone Configuration
+2016/03/26 15:46:15.747868 util.go:97: [master 19ab0d5] **Shipped -- Add Drone Configuration
+2016/03/26 15:46:15.747891 util.go:97:  1 file changed, 1 insertion(+), 1 deletion(-)
+2016/03/26 15:46:15.747917 util.go:97:  rewrite .drone.sec (100%)
+2016/03/26 15:46:15.748094 common.go:379: Verifed all configuration files for project
+TRACE 2016/03/26 15:46:15.748138 client.go:114: POST https://api.ciscoshipped.io/cli/6e8dd47c-f388-11e5-8f07-0242ac110240/status/download_cli?api_token=EPrsYwWoVFyXIbjvgeXdQeIDjrWGQfxu
+TRACE 2016/03/26 15:46:15.888274 client.go:159: Request status code 200 (200 OK)
+2016/03/26 15:46:15.888571 bootstrap.go:317: ============================================================
+2016/03/26 15:46:15.888599 bootstrap.go:318: Bootstrap Sandbox VM
+2016/03/26 15:46:15.888612 bootstrap.go:319: ============================================================
+TRACE 2016/03/26 15:46:15.888792 util.go:62: Changed directory to TestJSB/.shipped
+TRACE 2016/03/26 15:46:15.888823 command.go:23: Executing command: vagrant status
+TRACE 2016/03/26 15:46:19.171058 vagrantUp.go:68: Halting virtual machine so it can be refreshed
+TRACE 2016/03/26 15:46:19.171128 command.go:59: Executing command: vagrant halt
+2016/03/26 15:46:22.725591 vagrantUp.go:122: ==> dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: Attempting graceful shutdown of VM...
+TRACE 2016/03/26 15:46:28.008746 vagrantUp.go:75: Bringing up virtual machine
+TRACE 2016/03/26 15:46:28.008804 command.go:59: Executing command: vagrant up --no-parallel --provider=docker
+2016/03/26 15:46:29.986369 vagrantUp.go:122: Bringing machine 'testjsb01' up with 'docker' provider...
+2016/03/26 15:46:30.193410 vagrantUp.go:122: ==> testjsb01: Docker host is required. One will be created if necessary...
+2016/03/26 15:46:30.272672 vagrantUp.go:122:     testjsb01: Vagrant will now create or start a local VM to act as the Docker
+2016/03/26 15:46:30.272705 vagrantUp.go:122:     testjsb01: host. You'll see the output of the `vagrant up` for this VM below.
+2016/03/26 15:46:30.272838 vagrantUp.go:122:     testjsb01:  
+2016/03/26 15:46:31.221508 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: Clearing any previously set forwarded ports...
+TRACE 2016/03/26 15:46:31.571052 vagrantUp.go:105: Found port collision: deployed(2735) configured(2200) (    dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: Fixed port collision for 2735 => 2375. Now on port 2200.
+)
+2016/03/26 15:46:31.571130 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: Fixed port collision for 2735 => 2375. Now on port 2200.
+TRACE 2016/03/26 15:46:31.573325 vagrantUp.go:105: Found port collision: deployed(38080) configured(2201) (    dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: Fixed port collision for 38080 => 38080. Now on port 2201.
+)
+2016/03/26 15:46:31.573371 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: Fixed port collision for 38080 => 38080. Now on port 2201.
+TRACE 2016/03/26 15:46:31.575567 vagrantUp.go:105: Found port collision: deployed(22) configured(2202) (    dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: Fixed port collision for 22 => 2222. Now on port 2202.
+)
+2016/03/26 15:46:31.575614 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: Fixed port collision for 22 => 2222. Now on port 2202.
+2016/03/26 15:46:31.617392 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: Clearing any previously set network interfaces...
+2016/03/26 15:46:31.671349 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: Preparing network interfaces based on configuration...
+2016/03/26 15:46:31.671572 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: Adapter 1: nat
+2016/03/26 15:46:31.722657 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: Forwarding ports...
+2016/03/26 15:46:31.810513 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: 2735 (guest) => 2200 (host) (adapter 1)
+2016/03/26 15:46:31.810912 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: 38080 (guest) => 2201 (host) (adapter 1)
+2016/03/26 15:46:31.811378 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: 22 (guest) => 2202 (host) (adapter 1)
+2016/03/26 15:46:31.962806 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: Running 'pre-boot' VM customizations...
+2016/03/26 15:46:32.069593 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: Booting VM...
+2016/03/26 15:46:32.258660 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: Waiting for machine to boot. This may take a few minutes...
+2016/03/26 15:46:32.456475 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: SSH address: 127.0.0.1:2202
+2016/03/26 15:46:32.456609 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: SSH username: docker
+2016/03/26 15:46:32.457078 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: SSH auth method: password
+2016/03/26 15:46:55.343147 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: Machine booted and ready!
+2016/03/26 15:46:55.346035 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: Checking for guest additions in VM...
+2016/03/26 15:46:55.492009 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: The guest additions on this VM do not match the installed version of
+2016/03/26 15:46:55.492033 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: VirtualBox! In most cases this is fine, but in rare cases it can
+2016/03/26 15:46:55.492041 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: prevent things such as shared folders from working properly. If you see
+2016/03/26 15:46:55.492049 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: shared folder errors, please make sure the guest additions within the
+2016/03/26 15:46:55.492055 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: virtual machine match the version of VirtualBox you have installed on
+2016/03/26 15:46:55.492061 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: your host and reload your VM.
+2016/03/26 15:46:55.492067 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: 
+2016/03/26 15:46:55.492084 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: Guest Additions Version: 4.3.28 r100309
+2016/03/26 15:46:55.492090 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: VirtualBox Version: 5.0
+2016/03/26 15:46:55.588799 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: Running provisioner: docker...
+2016/03/26 15:46:56.446948 vagrantUp.go:122: ==> testjsb01: Syncing folders to the host VM...
+2016/03/26 15:46:56.794626 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: Mounting shared folders...
+2016/03/26 15:46:56.795064 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: /var/lib/docker/docker_1459021616_6626 => /Users/yogyadav/TestJSB/testjsb01
+2016/03/26 15:46:57.097592 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: /var/lib/docker/docker_1459021616_51482 => /Users/yogyadav/TestJSB/.shipped
+2016/03/26 15:46:57.379191 vagrantUp.go:122:     dockerhost-6e8dd47c-f388-11e5-8f07-0242ac110240: /var/lib/docker/docker_build_996e0526a248afcc238be29f8d22af7a => /Users/yogyadav/TestJSB/testjsb01
+2016/03/26 15:46:57.731864 vagrantUp.go:122: ==> testjsb01: Image is already built from the Dockerfile. `vagrant reload` to rebuild.
+2016/03/26 15:46:57.826505 vagrantUp.go:122: ==> testjsb01: Vagrant has noticed that the synced folder definitions have changed.
+2016/03/26 15:46:57.826525 vagrantUp.go:122: ==> testjsb01: With Docker, these synced folder changes won't take effect until you
+2016/03/26 15:46:57.826532 vagrantUp.go:122: ==> testjsb01: destroy the container and recreate it.
+2016/03/26 15:46:57.826701 vagrantUp.go:122: ==> testjsb01: Starting container...
+2016/03/26 15:46:58.089159 vagrantUp.go:122: ==> testjsb01: Waiting for container to enter "running" state...
+2016/03/26 15:47:03.294369 vagrantUp.go:122: The container started either never left the "stopped" state or
+2016/03/26 15:47:03.294389 vagrantUp.go:122: very quickly reverted to the "stopped" state. This is usually
+2016/03/26 15:47:03.294396 vagrantUp.go:122: because the container didn't execute a command that kept it running,
+2016/03/26 15:47:03.294401 vagrantUp.go:122: and usually indicates a misconfiguration.
+2016/03/26 15:47:03.294407 vagrantUp.go:122: If you meant for this container to not remain running, please
+2016/03/26 15:47:03.294412 vagrantUp.go:122: set the Docker provider configuration "remains_running" to "false":
+2016/03/26 15:47:03.294418 vagrantUp.go:122:   config.vm.provider "docker" do |d|
+2016/03/26 15:47:03.294424 vagrantUp.go:122:     d.remains_running = false
+2016/03/26 15:47:03.294429 vagrantUp.go:122:   end
+ERROR 2016/03/26 15:47:03.339051 vagrantUp.go:78: vagrant up finished with error: exit status 1
+TRACE 2016/03/26 15:47:03.339172 projects.go:270: Using user's home directory /Users/yogyadav as Shipped project directory
+TRACE 2016/03/26 15:47:03.339232 client.go:114: GET https://api.ciscoshipped.io/projects/6e8dd47c-f388-11e5-8f07-0242ac110240?api_token=EPrsYwWoVFyXIbjvgeXdQeIDjrWGQfxu
+TRACE 2016/03/26 15:47:03.836565 client.go:159: Request status code 200 (200 OK)
+TRACE 2016/03/26 15:47:03.836746 config.go:139: Using config file /Users/yogyadav/TestJSB/.shipped/shipped.ini
+TRACE 2016/03/26 15:47:03.836824 config.go:148: Also using project config file /Users/yogyadav/.shipped/shipped.ini
+TRACE 2016/03/26 15:47:03.836862 config.go:158: Also using home config file /Users/yogyadav/.shipped/shipped.ini
+TRACE 2016/03/26 15:47:03.836873 projects.go:304: Changed to project 6e8dd47c-f388-11e5-8f07-0242ac110240 directory /Users/yogyadav/TestJSB
+ERROR 2016/03/26 15:47:03.836901 commands.go:98: Bootstrap failed: exit status 1
